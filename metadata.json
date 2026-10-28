@@ -1,0 +1,6 @@
+{
+  "name": "Mamlaka Prints - Printing & Branded Merchandise Store",
+  "description": "Professional e-commerce platform for Mamlaka Prints offering printing materials, branded merchandise, custom printing services, and seamless WhatsApp ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
