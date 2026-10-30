@@ -86,12 +86,6 @@ export const Footer: React.FC = () => {
                   Contact & Location
                 </button>
               </li>
-              <li>
-                <button onClick={() => handleNav('admin')} className="hover:text-amber-400 transition-colors cursor-pointer flex items-center gap-1">
-                  <Shield className="w-3 h-3" />
-                  <span>Admin Portal</span>
-                </button>
-              </li>
             </ul>
           </div>
 
@@ -101,16 +95,6 @@ export const Footer: React.FC = () => {
               Product Categories
             </h4>
             <ul className="space-y-2 text-slate-400">
-              <li>
-                <button onClick={() => handleNav('materials', 'Printing Materials')} className="hover:text-white transition-colors cursor-pointer">
-                  Adhesive Vinyl Rolls
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('materials', 'Printing Materials')} className="hover:text-white transition-colors cursor-pointer">
-                  PVC Flex Banners
-                </button>
-              </li>
               <li>
                 <button onClick={() => handleNav('branded', 'Branded Goods')} className="hover:text-white transition-colors cursor-pointer">
                   Branded T-Shirts & Polos
@@ -169,7 +153,7 @@ export const Footer: React.FC = () => {
       <div className="border-t border-slate-800/80 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            © {new Date().getFullYear()} Mamlaka Prints. All rights reserved. Printing materials & branded merchandise Kenya.
+            © {new Date().getFullYear()} Mamlaka Prints. All rights reserved. Branded merchandise & custom printing Kenya.
           </div>
 
           <div className="flex items-center gap-4">

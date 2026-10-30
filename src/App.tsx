@@ -12,11 +12,9 @@ import { CategoryShowcase } from './components/CategoryShowcase';
 import { FeaturedProducts } from './components/FeaturedProducts';
 import { CustomPrintingSection } from './components/CustomPrintingSection';
 import { WhyChooseUs } from './components/WhyChooseUs';
-import { Testimonials } from './components/Testimonials';
 import { ShopCatalog } from './components/ShopCatalog';
 import { AboutSection } from './components/AboutSection';
 import { ContactSection } from './components/ContactSection';
-import { AdminDashboard } from './components/AdminDashboard';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { CartDrawer } from './components/CartDrawer';
 import { CheckoutModal } from './components/CheckoutModal';
@@ -37,12 +35,10 @@ const MainContent: React.FC = () => {
             <FeaturedProducts />
             <CustomPrintingSection />
             <WhyChooseUs />
-            <Testimonials />
           </>
         );
 
       case 'shop':
-      case 'materials':
       case 'branded':
         return <ShopCatalog />;
 
@@ -60,9 +56,6 @@ const MainContent: React.FC = () => {
       case 'contact':
         return <ContactSection />;
 
-      case 'admin':
-        return <AdminDashboard />;
-
       default:
         return (
           <>
@@ -71,7 +64,6 @@ const MainContent: React.FC = () => {
             <FeaturedProducts />
             <CustomPrintingSection />
             <WhyChooseUs />
-            <Testimonials />
           </>
         );
     }

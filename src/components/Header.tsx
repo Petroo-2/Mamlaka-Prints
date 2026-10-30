@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, MessageSquare, Menu, X, Shield, Search } from 'lucide-react';
+import { ShoppingBag, MessageSquare, Menu, X, Search } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 
 export const Header: React.FC = () => {
@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
 
   const openWhatsAppGeneral = () => {
     const cleanPhone = settings.whatsappNumber.replace(/[^0-9]/g, '');
-    window.open(`https://wa.me/${cleanPhone}?text=${encodeURIComponent('Hello Mamlaka Prints! I would like to make an inquiry about your printing materials and branded goods.')}`, '_blank');
+    window.open(`https://wa.me/${cleanPhone}?text=${encodeURIComponent('Hello Mamlaka Prints! I would like to make an inquiry about your branded goods and custom printing.')}`, '_blank');
   };
 
   return (
@@ -80,14 +80,6 @@ export const Header: React.FC = () => {
               All Products
             </button>
             <button
-              onClick={() => handleNavClick('materials', 'Printing Materials')}
-              className={`hover:text-[#0a3d24] transition-colors whitespace-nowrap cursor-pointer ${
-                activeTab === 'materials' ? 'text-[#0a3d24] font-semibold border-b-2 border-[#0a3d24] py-1' : ''
-              }`}
-            >
-              Printing Materials
-            </button>
-            <button
               onClick={() => handleNavClick('branded', 'Branded Goods')}
               className={`hover:text-[#0a3d24] transition-colors whitespace-nowrap cursor-pointer ${
                 activeTab === 'branded' ? 'text-[#0a3d24] font-semibold border-b-2 border-[#0a3d24] py-1' : ''
@@ -130,7 +122,7 @@ export const Header: React.FC = () => {
                   <Search className="w-4 h-4 text-slate-500 mr-2" />
                   <input
                     type="text"
-                    placeholder="Search vinyl, t-shirts..."
+                    placeholder="Search t-shirts, mugs..."
                     autoFocus
                     onChange={(e) => setSearchQuery(e.target.value)}
                     onKeyDown={(e) => {
@@ -187,19 +179,6 @@ export const Header: React.FC = () => {
               )}
             </button>
 
-            {/* Admin button subtle access */}
-            <button
-              onClick={() => handleNavClick('admin')}
-              className={`p-2 rounded-lg transition-colors ${
-                activeTab === 'admin'
-                  ? 'bg-amber-100 text-amber-900 font-semibold'
-                  : 'text-slate-400 hover:text-slate-600 hover:bg-slate-100'
-              }`}
-              title="Admin Orders & Portal"
-            >
-              <Shield className="w-4 h-4" />
-            </button>
-
             {/* Mobile menu toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -228,14 +207,6 @@ export const Header: React.FC = () => {
               }`}
             >
               All Products & Catalog
-            </button>
-            <button
-              onClick={() => handleNavClick('materials', 'Printing Materials')}
-              className={`w-full text-left px-4 py-2.5 rounded-md text-sm font-medium ${
-                activeTab === 'materials' ? 'bg-emerald-50 text-[#0a3d24] font-semibold' : 'text-slate-700 hover:bg-slate-50'
-              }`}
-            >
-              Printing Materials & Consumables
             </button>
             <button
               onClick={() => handleNavClick('branded', 'Branded Goods')}
@@ -268,14 +239,6 @@ export const Header: React.FC = () => {
               }`}
             >
               Contact & Location
-            </button>
-            <button
-              onClick={() => handleNavClick('admin')}
-              className={`w-full text-left px-4 py-2.5 rounded-md text-sm font-medium ${
-                activeTab === 'admin' ? 'bg-amber-50 text-amber-900 font-semibold' : 'text-slate-700 hover:bg-slate-50'
-              }`}
-            >
-              Admin Portal (Orders & Catalog)
             </button>
 
             <div className="pt-2 px-4">
