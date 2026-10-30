@@ -109,7 +109,7 @@ export const Hero: React.FC = () => {
             <div className="relative mx-auto rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 bg-white">
               
               <img
-                src="/src/assets/images/hero_printing_workshop_1793172271716.jpg"
+                src="/images/hero_printing_workshop.jpg"
                 alt="Mamlaka Prints Commercial Workshop"
                 className="w-full h-80 sm:h-96 lg:h-[430px] object-cover"
                 referrerPolicy="no-referrer"

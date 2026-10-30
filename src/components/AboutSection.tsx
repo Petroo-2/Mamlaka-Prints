@@ -62,7 +62,7 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
               <img
-                src="/src/assets/images/hero_printing_workshop_1793172271716.jpg"
+                src="/images/hero_printing_workshop.jpg"
                 alt="Mamlaka Prints Workshop"
                 className="w-full h-80 sm:h-96 object-cover"
                 referrerPolicy="no-referrer"

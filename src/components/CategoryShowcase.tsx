@@ -7,22 +7,12 @@ export const CategoryShowcase: React.FC = () => {
 
   const categories = [
     {
-      id: 'materials',
-      name: 'Printing Materials & Supplies',
-      categoryKey: 'Printing Materials',
-      description: 'Self-adhesive vinyl rolls, PVC flex banner, sublimation sheets, sticker media & accessories for commercial print shops.',
-      itemsCount: '12+ Varieties',
-      image: '/src/assets/images/product_printing_materials_1793172273253.jpg',
-      icon: Printer,
-      highlights: ['Adhesive Vinyl Rolls', 'Frontlit/Backlit Flex Banner', 'Sublimation & Transfer Papers', 'Large-Format Accessories']
-    },
-    {
       id: 'branded',
       name: 'Branded Goods & Merchandise',
       categoryKey: 'Branded Goods',
       description: 'Customized company apparel, laser-engraved drinkware, executive stationery, tote bags, and corporate promotional gifts.',
       itemsCount: '25+ Items',
-      image: '/src/assets/images/product_branded_apparel_1793172271708.jpg',
+      image: '/images/product_branded_apparel_1793172271708.jpg',
       icon: Shirt,
       highlights: ['Heavyweight Branded T-Shirts & Polos', 'Engraved Flasks & Ceramic Mugs', 'Executive Notebooks & Lanyards', 'Embroidered Caps & Tote Bags']
     },
@@ -32,7 +22,7 @@ export const CategoryShowcase: React.FC = () => {
       categoryKey: 'Custom Printing',
       description: 'Professional roll-up exhibition banners, die-cut waterproof stickers, business stationery, and tailored corporate merchandise kits.',
       itemsCount: 'Custom Specs',
-      image: '/src/assets/images/product_corporate_stationery_1793172274479.jpg',
+      image: '/images/product_corporate_stationery_1793172274479.jpg',
       icon: Sparkles,
       highlights: ['Executive Pull-Up Banners', 'Die-Cut Waterproof Stickers', 'Velvet-Touch Business Cards', 'Custom Corporate Gift Bundles']
     }
@@ -76,14 +66,14 @@ export const CategoryShowcase: React.FC = () => {
           </button>
         </div>
 
-        {/* 3 Pillar Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        {/* Pillar Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {categories.map((cat) => {
             const Icon = cat.icon;
             return (
               <div
                 key={cat.id}
-                onClick={() => handleSelect(cat.categoryKey, cat.id === 'custom' ? 'custom' : cat.id === 'materials' ? 'materials' : 'branded')}
+                onClick={() => handleSelect(cat.categoryKey, cat.id)}
                 className="group relative bg-slate-50/60 rounded-xl border border-slate-200/90 overflow-hidden hover:border-[#0a3d24]/50 transition-all hover:shadow-md cursor-pointer flex flex-col"
               >
                 {/* Visual Image Banner */}
